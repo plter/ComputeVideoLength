@@ -1,0 +1,22 @@
+<div style="width: 100%;height: 100%;display: flex;flex-direction: column;" @dragover="dragOverHandler"
+     @drop="dropHandler">
+    <div style="display: flex;flex-direction: column;flex: 1;padding: 5px;overflow: auto;">
+        <div style="display: flex;flex-direction: row;">
+            <button class="btn btn-primary" @click="btnSelectDirClicked">选择目录</button>
+            <input type="text" class="form-control" style="display: inline-block;flex: 1;margin-left: 5px;" readonly
+                   v-model="selectedDirPath">
+        </div>
+        <div style="flex: 1;margin-top:5px;overflow: auto;">
+            <table class="table">
+                <tbody>
+                <tr v-for="f in videoFilesFound">
+                    <td>{{f}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="bg-light" style="padding: 0 5px">共 {{videoFilesFound.length}} 项，时长
+        {{readableTotalVideoLength}}，{{workState}}
+    </div>
+</div>

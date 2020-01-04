@@ -1,0 +1,42 @@
+{
+  "name": "computevideolength",
+  "version": "1.0.0",
+  "description": "计算视频时长",
+  "build": {
+    "appId": "top.yunp.computevideolength",
+    "files": [
+      "!source"
+    ]
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build_debug": "webpack --mode=development",
+    "build_release": "webpack --mode=production&&electron-builder",
+    "watch": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plter/ComputeVideoLength.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plter/ComputeVideoLength/issues"
+  },
+  "homepage": "https://github.com/plter/ComputeVideoLength#readme",
+  "devDependencies": {
+    "css-loader": "^3.4.1",
+    "electron": "^7.1.7",
+    "electron-builder": "^21.2.0",
+    "html-loader": "^0.5.5",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "vue": "^2.6.11"
+  }
+}
